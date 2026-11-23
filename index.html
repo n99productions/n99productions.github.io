@@ -101,9 +101,9 @@
   .soon-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 14px; }
   .soon-row .en { font-size: 14.5px; }
   .all { padding: 6px 0 0 6px; }
-  .apps .btn, .music .btn { box-shadow: 6px 6px 0 var(--orange); }
-  .apps .btn:hover, .music .btn:hover { box-shadow: 9px 9px 0 var(--orange); }
-  .apps .btn:active, .music .btn:active { box-shadow: 2px 2px 0 var(--orange); }
+  .apps .btn, .videos .btn, .music .btn { box-shadow: 6px 6px 0 var(--orange); }
+  .apps .btn:hover, .videos .btn:hover, .music .btn:hover { box-shadow: 9px 9px 0 var(--orange); }
+  .apps .btn:active, .videos .btn:active, .music .btn:active { box-shadow: 2px 2px 0 var(--orange); }
 
   /* 3. Music, on black */
   .music { background: var(--black); color: var(--cream); padding-top: calc(var(--cut) + clamp(40px, 6vw, 64px)); padding-bottom: calc(var(--cut) + clamp(44px, 7vw, 72px)); clip-path: polygon(0 var(--cut), 100% 0, 100% 100%, 0 100%); }
@@ -117,6 +117,15 @@
   .band p.en { margin-top: 6px; font-size: 15px; color: var(--cream); opacity: .78; }
   .music .btn { background: var(--cream); color: var(--black); }
   @media (min-width: 720px) { .band { grid-template-columns: 300px 1fr; gap: 48px; } }
+
+  /* 2b. Videos, on cream: the channels N99 Productions makes */
+  .videos { padding-top: 0; }
+  .photo { width: min(100%, 220px); border: 3px solid var(--black); box-shadow: 8px 8px 0 var(--orange); }
+  .photo img { width: 100%; height: auto; }
+  .videos .band p.en { color: var(--ink-soft); opacity: 1; }
+  .videos .kicker { margin-top: 6px; font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .videos .kicker [lang="en"] { color: var(--ink-soft); }
+  @media (min-width: 720px) { .videos .band { grid-template-columns: 220px 1fr; } }
 
   /* 4. Social accounts, on orange */
   .follow { background: var(--orange); margin-top: calc(-1 * var(--cut)); padding-top: calc(var(--cut) + clamp(40px, 6vw, 64px)); padding-bottom: calc(var(--cut) + clamp(48px, 7vw, 76px)); clip-path: polygon(0 var(--cut), 100% 0, 100% 100%, 0 100%); }
@@ -230,6 +239,24 @@
       </div></li>
       <li class="all"><a class="btn" href="https://play.google.com/store/apps/dev?id=6307558418060160554"><span>Todas en Google Play<small lang="en">All our apps on Google Play</small></span> <svg class="play" aria-hidden="true"><use href="#play"/></svg></a></li>
     </ul>
+  </div>
+</section>
+
+<section class="videos" id="videos">
+  <div class="wrap">
+    <h2 class="tag">Videos</h2>
+    <div class="band">
+      <div class="photo"><img src="rodo-y-pia.jpg" alt="Rodo, un camioncito amarillo de juguete" width="480" height="480"></div>
+      <div>
+        <h3>Rodo y Pía</h3>
+        <p class="kicker">Canal infantil <span lang="en">· Kids' channel</span></p>
+        <p>Un canal en español para niñas y niños de 2 a 5 años. Rodo, un camioncito amarillo, y Pía, una pajarita turquesa, recorren Villa Ruedas y en cada episodio aprenden una sola cosa: un color, un vehículo, un número o una canción. Sin sustos y sin prisas.</p>
+        <p class="en" lang="en">A channel in Spanish for children aged 2 to 5. Rodo, a little yellow van, and Pía, a turquoise bird, travel around Villa Ruedas and learn one thing in each episode: a color, a vehicle, a number or a song. Calm and gentle.</p>
+        <div class="btns">
+          <a class="btn" href="https://www.youtube.com/@rodoypia">YouTube <svg class="play" aria-hidden="true"><use href="#play"/></svg></a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
